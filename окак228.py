@@ -1,271 +1,159 @@
-print("Здалова, я лавака сатурнита этот калькулятор именно для тебя")
-print("ты крутой?")
+print("Здалова дидиблад я лавака сатурнита этот калькулятор именно для тебя")
+print("ты дидиблад?")
 x = input()
-while x == "да":
+while x == "да" or e != "да":
     print("выбери действие: умножение, деление, деление на цело, остаток от деления, сложение, вычитание, возведение в степень, квадратный корень и анализ числа")
-    try:
-        y = str(input())
-    except:
-        print("Это не слово!")
-        break
+    y = input()
     if y == "анализ числа":
         print("введи число которое хочешь анализировать")
-        try:
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
-        r = len(str(c))
-        print(f"в твоем числе {r} разряда(ов).")
-        if c % 2 == 0:
-            print("твое число четное")
-        else:
-            print("твое число не четное")
-        su = 0
-        for i in str(c):
-            su += int(i)
-        print(f"сумма всех чисел в твоем числе = {su}")
-        k = c ** 0.5
-        print(f"квадратный корень твоего числа = {k}")
-        kub = c ** 0.33
-        print(f"кубический корень твоего числа = {kub}")
-        total = 0
-        for i in range(1, 10):
-            if c % i == 0:
-                total += 1
-        if total == 2:
-            print("твое число простое")
-        else:
-            print("твое число не простое")
-        print("количество какого числа ты хочешь найти в этом числе")
-        try:
-            kol = int(input())
-        except:
-            print("Это не число!")
-            break
-        tot = 0
-        for i in str(c):
-            if kol == int(i):
-                tot += 1
-        print(f"в твоем числе таких цифр {tot}")
-        break
+        c = int(input())
+        
     elif y == "умножение":
         print("введи два числа которые хочешь умножить")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
+        z = int(input())
+        c = int(input())
+        if 1 not in z and 2 not in z and 3 not in z and 4 not in z and 5 not in z and 6 not in z and 7 not in z and 8 not in z and 9 not in z:
+            break
+        if 1 not in c and 2 not in c and 3 not in c and 4 not in c and 5 not in c and 6 not in c and 7 not in c and 8 not in c and 9 not in c:
             break
         total = z * c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "деление":
         print("введи два числа которые хочешь поделить")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
+        c = int(input())
         total = z / c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "деление на цело":
         print("введи два числа которые хочешь поделить")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
+        c = int(input())
         total = z // c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "остаток от деления":
         print("введи два числа которые хочешь поделить")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
+        c = int(input())
         total = z % c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "сложение":
         print("введи два числа которые хочешь сложить")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
+        c = int(input())
         total = z + c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "вычитание":
         print("введи два числа которые хочешь вычисть")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
+        c = int(input())
         total = z - c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "возведение в степень":
         print("введи число и степень в которую хотите возвести")
-        try:
-            z = int(input())
-            c = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
+        c = int(input())
         total = z ** c
         print(total)
         print("хочешь продолжить с этим число, да или нет")
+        v = input()
     elif y == "квадратный корень":
         print("введи число из которого ты хочешь найти корень")
-        try:
-            z = int(input())
-        except:
-            print("Это не число!")
-            break
+        z = int(input())
         total = z ** 0.5
         print(total)
         print("хочешь продолжить с этим число, да или нет")
-    try:
-        v = str(input())
-    except:
-        print("Это не слово!")
+        v = input()
+    else:
+        lf = 67
+        print(lf)
+        break
+    print(total)
     while v == "да":
         print("выбери действие: умножение, деление, деление на цело, остаток от деления, сложение, вычитание, возведение в степень")
-        try:
-            y = str(input())
-        except:
-            print("Это не слово!")
+        y = input()
         if y == "умножение":
             print("введи число на которое хочешь домножить это")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-                break
+            c = int(input())
             total = total * c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "деление":
             print("введи число на которое хочешь поделить это")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-                break
+            c = int(input())
             total = total / c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "деление на цело":
             print("введи число на которое хочешь поделить это")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-                break
+            c = int(input())
             total = total // c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "остаток от деления":
             print("введи число на которое хочешь поделить это")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-                break
+            c = int(input())
             total = total % c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "сложение":
             print("введи число которое хочешь прибавить это")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-            break
+            c = int(input())
             total = total + c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "вычитание":
-            print("введи число которое хочешь вычисть это")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-                break
+            print("в5веди число которое хочешь вычисть это")
+            c = int(input())
             total = total - c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "возведение в степень":
             print("введи степень в которую хотите возвести число")
-            try:
-                c = int(input())
-            except:
-                print("Это не число!")
-                break
+            c = int(input())
             total = total ** c
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
+            v = input()
         if y == "квадратный корень":
             total = total ** 0.5
             print(total)
             print("хочешь продолжить с этим число, да или нет")
-            try:
-                v = str(input())
-            except:
-                print("Это не слово!")
-        if v == "нет":
-            print("закончить работу с калькулятором?")
-            try:
-                e = str(input())
-            except:
-                print("Это не слово!")
-                break
+            v = input()
+            if v == "нет":
+                print("закончить работу с калькулятором?")
+                e = input()
+        else:
+            lf = 67
+            print(lf)
+            break
+    if lf == 67:
+        break
     if e == "да":
         break
 if x == "нет":
     print("ты не дидиблад, тебе это калькулятор не нужен((((")
+elif lf == 67:
+    for i in range(66):
+        print(67)
 elif x != "да":
     print("тебе это калькулятор не нужен((((")
 elif x == "да":
     print(total)
-elif x == "да" and y == "нализ числа":
-    print("до новых встречь, пока))")
